@@ -1,0 +1,38 @@
+Name: Sung Yi
+SSOID: sjy7rf
+project4
+Nov 6th 2016
+
+NAME
+loglib.c - a library for log 
+log.h - a header for the library
+oss - a executable file that is increment the clock. It will spawn children too
+slave - a executalbe file that is created for testing IPCS. It will read the clock 
+pcb.h - contain structure for the bakery algorithm
+
+DESCRIPTION
+simple os simulator to schedule multiple feedback queue.
+it has 3 priority. 0 for RR 1,2 for FCFS
+all the children will be started w/ priority 1.
+if they are blocked by oss, it will move to upper level
+if they finished before the given quantum, move to lower level.
+
+-h
+will show the purpose of the file "test"
+
+-s [integer]
+set maximum number of processes to [integer]
+
+-l [filename]
+the output will be [filename]
+
+-t [integer]
+set timer for [integer] seconds to terminate master process
+
+Author
+Sung Yi
+
+Additional Note
+1. always kicked out when execute more than 10. (require to optimize)
+2. this time, 1 sec is equal to 1000000 nano(10^-7), not 100000000 nano(10^-9).
+3. could not finish before midnight (current time is 7:07 AM)
